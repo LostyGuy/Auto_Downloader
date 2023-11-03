@@ -33,7 +33,6 @@ def menu():
         g_input.update(NOTEPAD)
     elif i == 3:
         g_input.update(CppDEV)
-    print(g_input)
 
 
 
@@ -50,5 +49,6 @@ def request_file():
     urllib.request.urlretrieve(request.full_url, Filename)
 
 
-#request_file()
 menu()
+#then
+request_file()
