@@ -5,15 +5,15 @@ import urllib.request
 # non .exe URL - BIG problem
 
 obs_url = "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-29.1.3-Full-Installer-x64.exe"
-obs_filename = ""
+obs_filename = "OBS_Studio_x64"
 OBS = {'url' : obs_url,'filename' : obs_filename}
 
 notepad_url = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.5.8/npp.8.5.8.Installer.x64.exe"
-notepad_filename = ""
+notepad_filename = "NotePad++_x64"
 NOTEPAD = {'url' : notepad_url,'filename' :  notepad_filename}
 
 CppDEV_url = "https://downloads.sourceforge.net/project/dev-cpp/Binaries/Dev-C%2B%2B%204.9.9.2/devcpp-4.9.9.2_setup.exe?ts=gAAAAABlRSjXezyGj2HfunrUQ2Lc-9-7g0vs7RCd41BglxwijThpbLU6W33t58YXRZBSeSLFHPGm_MTC5qkzY3HaIrBEBS4iOQ%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fdev-cpp%2Ffiles%2FBinaries%2FDev-C%252B%252B%25204.9.9.2%2Fdevcpp-4.9.9.2_setup.exe%2Fdownload"
-CppDEV_filename = ""
+CppDEV_filename = "C++DEV_x64"
 CppDEV = {'url' : CppDEV_url,'filename' :  CppDEV_filename}
 
 #get User-Agent automatically
@@ -38,17 +38,17 @@ def menu():
 
 
 def request_file():
-    
-    g_input[1]
 
+    #assigning static values for requests
+    URL = g_input('url')
+    Filename = g_input('filename')
 
     #sends request
-    request = urllib.request.Request(  headers=headers)
+    request = urllib.request.Request(URL, headers=headers)
+
     #downloads file from request
-    urllib.request.urlretrieve(request.full_url  )
+    urllib.request.urlretrieve(request.full_url, Filename)
 
 
 #request_file()
 menu()
-
-print(g_input)
