@@ -39,8 +39,8 @@ def menu():
 def request_file():
 
     #assigning static values for requests
-    URL = g_input('url')
-    Filename = g_input('filename')
+    URL = g_input.get('url')
+    Filename = g_input.get('filename')
 
     #sends request
     request = urllib.request.Request(URL, headers=headers)
