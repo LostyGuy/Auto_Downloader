@@ -1,6 +1,6 @@
 import urllib.request
 
-genshin_url = "https://sg-public-api.hoyoverse.com/event/download_porter/trace/ys_global/genshinimpactpc/default?url=https%3A%2F%2Fact.hoyoverse.com%2Fpuzzle%2Fhk4e%2Fpz_wY19_dy4do%2Findex.html%3Fpz_plat%3Dpc%26lang%3Den-us%26game_biz%3Dhk4e_global%26bridge_name%3Dpz_wY19_dy4do"
+#genshin_url = "https://sg-public-api.hoyoverse.com/event/download_porter/trace/ys_global/genshinimpactpc/default?url=https%3A%2F%2Fact.hoyoverse.com%2Fpuzzle%2Fhk4e%2Fpz_wY19_dy4do%2Findex.html%3Fpz_plat%3Dpc%26lang%3Den-us%26game_biz%3Dhk4e_global%26bridge_name%3Dpz_wY19_dy4do"
 obs_url = "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-29.1.3-Full-Installer-x64.exe"
 
 def request_file():
@@ -10,7 +10,7 @@ def request_file():
     }
 
     # Use urllib.request.urlretrieve to download the file
-    request = urllib.request.Request(genshin_url, file_name, headers=headers)
+    request = urllib.request.Request(genshin_url, headers=headers)
 
     urllib.request.urlretrieve(request.full_url, file_name)
 
