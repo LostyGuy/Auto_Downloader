@@ -12,18 +12,24 @@ notepad_url = "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/d
 notepad_filename = ""
 NOTEPAD = {notepad_url, notepad_filename}
 
-VSC_url = "https://downloads.sourceforge.net/project/dev-cpp/Binaries/Dev-C%2B%2B%204.9.9.2/devcpp-4.9.9.2_setup.exe?ts=gAAAAABlRSjXezyGj2HfunrUQ2Lc-9-7g0vs7RCd41BglxwijThpbLU6W33t58YXRZBSeSLFHPGm_MTC5qkzY3HaIrBEBS4iOQ%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fdev-cpp%2Ffiles%2FBinaries%2FDev-C%252B%252B%25204.9.9.2%2Fdevcpp-4.9.9.2_setup.exe%2Fdownload"
-VSC_filename = ""
-VSC = {VSC_url, VSC_filename}
+CppDEV_url = "https://downloads.sourceforge.net/project/dev-cpp/Binaries/Dev-C%2B%2B%204.9.9.2/devcpp-4.9.9.2_setup.exe?ts=gAAAAABlRSjXezyGj2HfunrUQ2Lc-9-7g0vs7RCd41BglxwijThpbLU6W33t58YXRZBSeSLFHPGm_MTC5qkzY3HaIrBEBS4iOQ%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fdev-cpp%2Ffiles%2FBinaries%2FDev-C%252B%252B%25204.9.9.2%2Fdevcpp-4.9.9.2_setup.exe%2Fdownload"
+CppDEV_filename = ""
+CppDEV = {CppDEV_url, CppDEV_filename}
 
 #get User-Agent automatically
 headers = {
 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0'
 }
 
+global g_output
+g_output = {False, False, False}
+
 def menu():
 
-    if:
+    print("options 1 - OBS,2 - NOTEPAD,3 - C++DEV")
+    i = input("choose your Pokemon!")
+
+
 
 def request_file():
     
@@ -31,9 +37,9 @@ def request_file():
 
 
     #sends request
-    request = urllib.request.Request(, headers=headers)
+    request = urllib.request.Request(  headers=headers)
     #downloads file from request
-    urllib.request.urlretrieve(request.full_url, x)
+    urllib.request.urlretrieve(request.full_url  )
 
 
 request_file()
