@@ -10,7 +10,10 @@ def request_file():
     }
 
     # Use urllib.request.urlretrieve to download the file
-    urllib.request.Request(genshin_url, file_name, headers=headers)
+    request = urllib.request.Request(genshin_url, file_name, headers=headers)
+
+    urllib.request.urlretrieve(request.full_url, file_name)
+
 
 request_file()
 
