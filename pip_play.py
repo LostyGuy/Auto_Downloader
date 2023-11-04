@@ -20,13 +20,12 @@ def file_check():
     if out_tqdm == should_tqdm:
         os.popen("powershell.exe -Command pip install tqdm")
     else:
-        complete_tqdm.update(1)
+        complete_tqdm = 1
     
     if out_requests == should_requests:
         os.popen("powershell.exe - Command pip install requests")
     else:
-        complete_requests.update(1)
-
+        complete_requests = 1
 
 
 file_check()
