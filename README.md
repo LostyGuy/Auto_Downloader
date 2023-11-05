@@ -23,4 +23,6 @@ For school |For Real|
 
 3.4b IF YES show Start Screen
 
+-------------------------------------
+
 If above points are made
