@@ -17,13 +17,6 @@ def file_check():
     out_tqdm = subprocess.run(['pip', 'show', check_tqdm], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     out_requests = subprocess.run(['pip', 'show', check_requests], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
-    #print(os.system("powershell.exe -Command pip show me"))
-
-    should_tqdm = "WARNING: Package(s) not found: tqdm"
-    should_requests = "WARNING: Package(s) not found: requests"
-
-    #print(out_tqdm, out_requests)
-
     if out_tqdm.returncode == 1:
         os.system(pip_install + check_tqdm)
  
@@ -34,8 +27,13 @@ def file_check():
 
 command = "python Auto_app.py"
 file_check()
-os.system(command)
+
+os.system("cls")
 
 print("Installing components completed...")
 print("Running app...")
+
+os.system(command)
+
+
 
