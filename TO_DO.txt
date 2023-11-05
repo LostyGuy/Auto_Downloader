@@ -1,0 +1,5 @@
+- installing python
+
+- installing pip
+
+- check if powershell instaling is working
