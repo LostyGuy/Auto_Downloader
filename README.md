@@ -1,6 +1,8 @@
 # Auto_Downloader
 For school |For Real|
 
+----------------------------------------
+
 1.1 Downloading file from URL
 
 1.2 Chose destination (by user)
@@ -17,12 +19,14 @@ For school |For Real|
 
 3.1 Run file.exe
 
-3.2 After installing and ended creator ask if user want any other APP
+3.2 After installing and ended creator, program asks if user want any other APP
 
 3.3a IF NOT show 'Goodbye Screen'
 
-3.4b IF YES show Start Screen
+3.3b IF YES show Start Screen
 
 -------------------------------------
 
-If above points are made
+If above points are made then with TKinter I'll create simple window
+
+ICON -> Button -> Weight --- For every file in menu
