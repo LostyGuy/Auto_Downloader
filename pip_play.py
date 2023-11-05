@@ -1,16 +1,14 @@
 import os
 import subprocess
 
-complete_tqdm  = 0
-complete_requests = 0
-index = 0
+command = "python Auto_app.py"
 
 def file_check():
 
     global index
 
     check_tqdm = "tqdm"
-    check_requests = "pip show requests"
+    check_requests = "requests"
     pip_install = "powershell.exe -Command pip install "    
 
 
@@ -24,15 +22,13 @@ def file_check():
         os.system(pip_install + check_requests)
    
 
-
-command = "python Auto_app.py"
 file_check()
+os.system('cls')
 
-os.system("cls")
-
-print("Installing components completed...")
+print("components completed...")
 print("Running app...")
 
+#run Auto_app.py
 os.system(command)
 
 
