@@ -9,11 +9,13 @@ def file_check():
 
     global index
 
-    check_tqdm = "pip show tqdm"
+    check_tqdm = "tqdm"
     check_requests = "pip show requests"
+    pip_install = "powershell.exe -Command pip install "    
 
-    out_tqdm = subprocess.run(['powershell.exe', '-Command', check_tqdm], capture_output=True, text=True, check=True, shell = True).stdout
-    out_requests = subprocess.run(['powershell.exe', '-Command', check_requests], capture_output=True, text=True, check=True, shell = True).stdout
+
+    out_tqdm = subprocess.run(['pip', 'show', check_tqdm], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    out_requests = subprocess.run(['pip', 'show', check_requests], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
     #print(os.system("powershell.exe -Command pip show me"))
 
@@ -22,27 +24,18 @@ def file_check():
 
     #print(out_tqdm, out_requests)
 
-    if out_tqdm.strip() == should_tqdm:
-        os.system("powershell.exe -Command pip install tqdm")
-    else:
-        complete_tqdm = 1
-    
-    if out_requests.strip() in should_requests:
-        os.system("powershell.exe - Command pip install requests")
-    else:
-        complete_requests = 1
-        
-    if complete_requests and complete_tqdm:
-         index = 1
-         return True
-    else:
-        return False
+    if out_tqdm.returncode == 1:
+        os.system(pip_install + check_tqdm)
+ 
+    if out_requests.returncode == 1:
+        os.system(pip_install + check_requests)
+   
 
 
-file_name = "Auto_app.py"
+command = "python Auto_app.py"
 file_check()
+os.system(command)
 
-if index == 1:
-    os.system(f"start {file_name}")
-else:
-    file_check()
+print("Installing components completed...")
+print("Running app...")
+
