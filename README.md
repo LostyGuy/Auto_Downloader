@@ -3,17 +3,17 @@ For school |For Real|
 
 ----------------------------------------
 
-1.1 Downloading file from URL
+1.1 Download file from URL
 
-1.2 Chose destination (by user)
+1.2 Chosen destination (by user)
 
 ----------------------------------------
 
-2.1 Progression bar of file downloading
+2.1 Progression bar of downloading
 
-2.2 Output of completed download
+2.2 Confirming the end of downloading
 
-2.3 Opening a folder with file after
+2.3 Opening a folder with file
 
 ---------------------------------------
 
@@ -27,6 +27,6 @@ For school |For Real|
 
 -------------------------------------
 
-If above points are made then with TKinter I'll create simple window
+If above points are done then with TKinter I'll create simple window
 
-ICON -> Button -> Weight --- For every file in menu
+Icon -> Button -> Weight --- For every file in menu
