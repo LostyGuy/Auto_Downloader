@@ -26,6 +26,8 @@ headers = {
 
 g_input = {}
 
+win_login = os.getlogin()
+
 def menu():
 
     print("options 1 - OBS,2 - NOTEPAD,3 - STEAM")
@@ -65,6 +67,12 @@ def request_file():
                     if t.n == total_size:
                         global download_comp
                         download_comp = 1
+
+def folder_opening():
+    if download_comp == 1:
+        os.system(f"copy {g_input.get('filename')} C:\Users\{win_login}\Downloads")
+        
+        
 
 
 
